@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Crust Bakery | Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Golden Crust Bakery</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Contact Us</h2>
+      <div class="grid" style="grid-template-columns: 1fr 1fr;">
+        <div>
+          <p><strong>Address:</strong> 123 Main Street, Johannesburg, 2000</p>
+          <p><strong>Phone:</strong> 011 123 4567</p>
+          <p><strong>Email:</strong> hello@goldencrustbakery.co.za</p>
+          <p><strong>Opening Hours:</strong><br>
+             Mon - Fri: 6:00 AM - 6:00 PM<br>
+             Saturday: 7:00 AM - 4:00 PM<br>
+             Sunday: 8:00 AM - 1:00 PM</p>
+
+          <iframe class="map-embed" style="margin-top:20px;"
+            src="https://www.google.com/maps?q=Johannesburg&output=embed"
+            loading="lazy"></iframe>
+        </div>
+
+        <form id="contact-form">
+          <label for="c-name">Full Name *</label>
+          <input type="text" id="c-name" name="name" required>
+
+          <label for="c-email">Email Address *</label>
+          <input type="email" id="c-email" name="email" required>
+
+          <label for="c-message">Message *</label>
+          <textarea id="c-message" name="message" required></textarea>
+
+          <button type="submit" class="btn" style="margin-top:20px;">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Golden Crust Bakery | [Your Student Number]</p>
+    <p>123 Main Street, Johannesburg</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
