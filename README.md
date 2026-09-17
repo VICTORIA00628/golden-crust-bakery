@@ -43,3 +43,15 @@ Photography used on this site is free-to-use stock photography sourced from Unsp
 - Converted several `px` values to relative units (`rem`) for font sizes and spacing.
 - Added a second responsive breakpoint for tablet screens (768px), in addition to the existing mobile breakpoint (480px).
 - Added subtle `box-shadow` transition on product cards for improved user experience.
+
+- 
+## Responsive Design Screenshots
+
+### Mobile (iPhone SE)
+![Mobile view](Desktop%201.PNG)
+
+### Tablet (iPad Air)
+![Tablet view](Desktop%202.PNG)
+
+### Desktop
+![Desktop view](Desktop%203.PNG)
