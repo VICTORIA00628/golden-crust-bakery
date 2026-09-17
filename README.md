@@ -34,4 +34,12 @@ Photography used on this site is free-to-use stock photography sourced from Unsp
 - The Independent Institute of Education (Pty) Ltd. (2026). WEDE5020 Web Development (Introduction) Formative 1 Part 1 Brief.
 
 ## Author
-[Your Full Name] – [Your Student Number]
+[Your Full Name] – [Your Student Number]## Changelog
+
+### Part 2 – 17 September 2026
+- Updated `style.css` to address Part 1 feedback: CSS was flagged as looking copied / not following instructions.
+- Added `:focus` and `:active` states on buttons, nav links, and form inputs (previously only `:hover` was used).
+- Added `letter-spacing` on headings and logo for typography styling.
+- Converted several `px` values to relative units (`rem`) for font sizes and spacing.
+- Added a second responsive breakpoint for tablet screens (768px), in addition to the existing mobile breakpoint (480px).
+- Added subtle `box-shadow` transition on product cards for improved user experience.
