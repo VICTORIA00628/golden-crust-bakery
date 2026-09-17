@@ -10,6 +10,7 @@
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1rem;
   background-color: var(--cream);
   color: var(--dark);
   line-height: 1.6;
@@ -27,7 +28,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 1rem 2rem;
   max-width: 1100px;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -36,13 +37,14 @@ nav {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  letter-spacing: 1px;
   color: var(--gold);
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 1.5rem;
 }
 
 nav a {
@@ -51,7 +53,8 @@ nav a {
   font-weight: 500;
 }
 
-nav a:hover { color: var(--gold); }
+nav a:hover,
+nav a:focus { color: var(--gold); }
 
 .hero {
   position: relative;
@@ -73,41 +76,45 @@ nav a:hover { color: var(--gold); }
   background: rgba(58, 36, 24, 0.55);
 }
 
-.hero-content { position: relative; z-index: 1; padding: 20px; }
+.hero-content { position: relative; z-index: 1; padding: 1.25rem; }
 
-.hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+.hero h1 { font-size: 2.5rem; letter-spacing: 0.5px; margin-bottom: 15px; }
 .hero p { font-size: 1.2rem; margin-bottom: 20px; }
 
 .btn {
   display: inline-block;
   background-color: var(--gold);
   color: var(--dark);
-  padding: 12px 28px;
+  padding: 0.75rem 1.75rem;
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
-  border: none;
+  border: 2px solid transparent;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .btn:hover { background-color: #c8932f; }
+.btn:focus { outline: none; border-color: var(--dark); }
+.btn:active { background-color: var(--brown); color: white; }
 
-main { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+main { max-width: 1100px; width: 100%; margin: 0 auto; padding: 2.5rem 1.25rem; }
 
-section { margin-bottom: 50px; }
+section { margin-bottom: 3rem; }
 
 h2 {
   color: var(--brown);
   border-bottom: 3px solid var(--gold);
   display: inline-block;
   padding-bottom: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.5px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
+  gap: 1.5rem;
 }
 
 .card {
@@ -115,29 +122,39 @@ h2 {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s ease;
 }
 
+.card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.18); }
+
 .card img { width: 100%; height: 180px; object-fit: cover; display: block; }
-.card-body { padding: 15px; }
+.card-body { padding: 1rem; }
 .card-body h3 { color: var(--brown); margin-bottom: 5px; }
 .price { color: var(--gold); font-weight: bold; }
 
 form {
   background: white;
-  padding: 25px;
+  padding: 1.5rem;
   border-radius: 8px;
   max-width: 600px;
+  width: 100%;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-label { display: block; margin-top: 15px; font-weight: 600; }
+label { display: block; margin-top: 1rem; font-weight: 600; }
 input, textarea, select {
   width: 100%;
-  padding: 10px;
+  padding: 0.6rem;
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-family: inherit;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(217, 164, 65, 0.3);
 }
 
 textarea { resize: vertical; min-height: 100px; }
@@ -146,11 +163,12 @@ footer {
   background-color: var(--brown);
   color: white;
   text-align: center;
-  padding: 25px;
-  margin-top: 40px;
+  padding: 1.5rem;
+  margin-top: 2.5rem;
 }
 
 footer a { color: var(--gold); }
+footer a:hover, footer a:focus { color: white; }
 
 .map-embed {
   width: 100%;
@@ -159,8 +177,20 @@ footer a { color: var(--gold); }
   border-radius: 8px;
 }
 
-@media (max-width: 600px) {
-  nav { flex-direction: column; gap: 10px; }
-  nav ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
-  .hero h1 { font-size: 1.8rem; }
+/* ---- Responsive Design: Tablet ---- */
+@media (max-width: 768px) {
+  nav { padding: 1rem 1.25rem; }
+  .hero h1 { font-size: 2rem; }
+  .grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+}
+
+/* ---- Responsive Design: Mobile ---- */
+@media (max-width: 480px) {
+  nav { flex-direction: column; gap: 0.75rem; }
+  nav ul { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  .hero { height: 50vh; }
+  .hero h1 { font-size: 1.6rem; }
+  .hero p { font-size: 1rem; }
+  main { padding: 1.5rem 1rem; }
+  .grid { grid-template-columns: 1fr; }
 }
