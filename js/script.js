@@ -144,3 +144,70 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// ===== Contact form validation =====
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+      // Let our JavaScript handle the validation messages
+  contactForm.setAttribute("novalidate", "");
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Remove old error messages
+    contactForm.querySelectorAll(".error-msg").forEach(function (el) {
+      el.remove();
+    });
+
+    let isValid = true;
+
+    // Full name check
+    const nameInput = document.getElementById("c-name");
+    if (nameInput.value.trim().length < 2) {
+      showContactError(nameInput, "Please enter your full name (at least 2 characters).");
+      isValid = false;
+    }
+
+       // Email check
+    const emailInput = document.getElementById("c-email");
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailInput.value.trim())) {
+      showContactError(emailInput, "Please enter a valid email address (example: name@email.com).");
+      isValid = false;
+    }
+           // Message type check
+    const typeInput = document.getElementById("c-type");
+    if (typeInput.value === "") {
+      showContactError(typeInput, "Please select a message type.");
+      isValid = false;
+    }
+        // Message check
+    const messageInput = document.getElementById("c-message");
+    if (messageInput.value.trim().length < 10) {
+      showContactError(messageInput, "Please write a message of at least 10 characters.");
+      isValid = false;
+    }
+    if (isValid) {
+           // Build the email from the form details
+      const subject = "Website message: " + typeInput.value;
+      const body =
+        "Name: " + nameInput.value.trim() + "\n" +
+        "Email: " + emailInput.value.trim() + "\n" +
+        "Message type: " + typeInput.value + "\n\n" +
+        messageInput.value.trim();
+
+      window.location.href =
+        "mailto:hello@goldencrustbakery.co.za" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+    }
+  });
+}
+
+function showContactError(input, message) {
+  const error = document.createElement("p");
+  error.className = "error-msg";
+  error.style.color = "red";
+  error.textContent = message;
+  input.insertAdjacentElement("afterend", error);
+}
