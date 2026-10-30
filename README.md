@@ -49,6 +49,9 @@ Photography used on this site is free-to-use stock photography sourced from Unsp
 - Added client-side JavaScript validation to the enquiry form: full name (at least 2 letters), email format, optional South African phone number, product selection, optional date that cannot be in the past, and details (at least 10 characters).
 - Added clear red error messages under each field that has invalid input.
 - Added a response box to the enquiry page that shows cost and availability information depending on the product and date chosen.
+- Added a "Message Type" dropdown (General question, Feedback, Complaint, Other) to the contact form in `contact.html`.
+- Added JavaScript validation to the contact form in `js/script.js`: full name (at least 2 characters), email format, message type selected, and message (at least 10 characters), with red error messages shown under each field.
+- When the form is valid, the details are compiled into an email (name, email, message type and message) that opens in the user's email program using a `mailto:` link.
 
  
 ## Responsive Design Screenshots
@@ -61,3 +64,4 @@ Photography used on this site is free-to-use stock photography sourced from Unsp
 
 ### Desktop
 ![Desktop view](Desktop%203.PNG)
+
