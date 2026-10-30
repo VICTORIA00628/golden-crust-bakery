@@ -43,8 +43,14 @@ Photography used on this site is free-to-use stock photography sourced from Unsp
 - Converted several `px` values to relative units (`rem`) for font sizes and spacing.
 - Added a second responsive breakpoint for tablet screens (768px), in addition to the existing mobile breakpoint (480px).
 - Added subtle `box-shadow` transition on product cards for improved user experience.
-
 - 
+ ### Part 3 - 30 October 2026
+- Added `js/script.js` and linked it to `enquiry.html`.
+- Added client-side JavaScript validation to the enquiry form: full name (at least 2 letters), email format, optional South African phone number, product selection, optional date that cannot be in the past, and details (at least 10 characters).
+- Added clear red error messages under each field that has invalid input.
+- Added a response box to the enquiry page that shows cost and availability information depending on the product and date chosen.
+
+ 
 ## Responsive Design Screenshots
 
 ### Mobile (iPhone SE)
