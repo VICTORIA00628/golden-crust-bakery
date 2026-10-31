@@ -34,7 +34,9 @@ Photography used on this site is free-to-use stock photography sourced from Unsp
 - The Independent Institute of Education (Pty) Ltd. (2026). WEDE5020 Web Development (Introduction) Formative 1 Part 1 Brief.
 
 ## Author
-[Your Full Name] – [Your Student Number]## Changelog
+Mishika Ntambwe Victoria ST10540561
+
+## Changelog
 
 ### Part 2 – 17 September 2026
 - Updated `style.css` to address Part 1 feedback: CSS was flagged as looking copied / not following instructions.
